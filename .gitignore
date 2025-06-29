@@ -1,0 +1,33 @@
+# Java-Kompilierte Dateien
+*.class
+
+# Log-Dateien
+*.log
+
+# BlueJ-Dateien
+*.ctxt
+
+# Eclipse/IntelliJ IDEA/NetBeans-Projektdateien und Verzeichnisse
+*.iml
+*.ipr
+*.iws
+.idea/
+*.nbproject/
+*.project
+*.classpath
+*.settings/
+out/
+bin/
+build/
+
+# MacOS
+.DS_Store
+
+# Windows
+Thumbs.db
+
+# Sonstige
+*.swp
+*.swo
+.gradle/
+launch.json
