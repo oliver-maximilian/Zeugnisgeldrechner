@@ -1,78 +1,48 @@
-### 1. Voraussetzungen
+# Zeugnisgeldrechner
+
+## 1. Voraussetzungen
 
 Stelle sicher, dass du die folgenden Softwarekomponenten installiert hast:
 
-- **Java Development Kit (JDK)**: Installiere die neueste Version des JDK (z.B. JDK 11 oder JDK 17). Du kannst das JDK von der [Oracle-Website](https://www.oracle.com/java/technologies/javase-jdk11-downloads.html) oder von [AdoptOpenJDK](https://adoptopenjdk.net/) herunterladen.
-- **Entwicklungsumgebung (IDE)**: Eine IDE wie IntelliJ IDEA, Eclipse oder NetBeans kann dir helfen, das Projekt einfacher zu verwalten.
+- **Java Development Kit (JDK)**: Installiere eine aktuelle Version des JDK (z.B. JDK 11 oder JDK 17). Du kannst das JDK von der [Oracle-Website](https://www.oracle.com/java/technologies/javase-jdk11-downloads.html) oder von [Adoptium](https://adoptium.net/) herunterladen.
+- **Entwicklungsumgebung (IDE)**: Eine IDE wie IntelliJ IDEA, Eclipse, NetBeans oder Visual Studio Code wird empfohlen.
 
-### 2. Projektstruktur
+## 2. Projektstruktur
 
-Stelle sicher, dass dein Projekt eine geeignete Struktur hat. Eine typische Java-Projektstruktur sieht folgendermaßen aus:
+Die Projektstruktur sieht wie folgt aus:
 
 ```
-/MeinJavaProjekt
+/zeugnisgeldrechner
 |-- /src
-|   |-- /main
-|   |   |-- /java
-|   |   |   |-- com
-|   |   |       |-- beispiel
-|   |   |           |-- Main.java
-|   |   |-- /resources
-|   |-- /test
-|       |-- /java
-|           |-- com
-|               |-- beispiel
-|                   |-- MainTest.java
-|-- /lib
-|-- pom.xml (für Maven-Projekte)
-|-- build.gradle (für Gradle-Projekte)
+|   |-- Zeugnisgeldrechner.java
+|-- README.md
+|-- .gitignore
 ```
 
-### 3. IDE-Projekt einrichten
+## 3. Projekt öffnen und ausführen
 
-#### IntelliJ IDEA
+1. **Projekt öffnen**  
+   Öffne das Projektverzeichnis `/zeugnisgeldrechner` in deiner IDE.
 
-1. **Projekt importieren**:
-   - Öffne IntelliJ IDEA und wähle "Import Project".
-   - Wähle das Verzeichnis deines Projekts aus.
-   - Wähle die Build-Tool-Option (Maven oder Gradle), falls vorhanden.
+2. **Kompilieren**  
+   Kompiliere die Datei `Zeugnisgeldrechner.java`. In den meisten IDEs genügt ein Klick auf "Build" oder "Kompilieren".
 
-2. **SDK konfigurieren**:
-   - Gehe zu `File` > `Project Structure`.
-   - Wähle `Project` und stelle sicher, dass das richtige JDK ausgewählt ist.
+3. **Ausführen**  
+   Starte die Anwendung, indem du die `main`-Methode in `Zeugnisgeldrechner.java` ausführst.
 
-3. **Abhängigkeiten hinzufügen**:
-   - Wenn du Maven oder Gradle verwendest, füge die benötigten Abhängigkeiten in `pom.xml` oder `build.gradle` hinzu.
+   Alternativ kannst du das Projekt auch im Terminal kompilieren und starten:
+   ```sh
+   javac src/Zeugnisgeldrechner.java
+   java -cp src Zeugnisgeldrechner
+   ```
 
-#### Eclipse
+## 4. Hinweise zur Benutzung
 
-1. **Projekt importieren**:
-   - Öffne Eclipse und wähle `File` > `Import`.
-   - Wähle `Existing Projects into Workspace` und wähle das Verzeichnis deines Projekts aus.
+- Die Anwendung bietet eine grafische Oberfläche zur Eingabe von Noten und zur Berechnung des Zeugnisgeldes.
+- Folge den Anweisungen auf dem Bildschirm und benutze die Buttons zur Navigation.
 
-2. **JDK konfigurieren**:
-   - Gehe zu `Window` > `Preferences` > `Java` > `Installed JREs` und stelle sicher, dass das richtige JDK ausgewählt ist.
+## 5. Fehlerbehebung
 
-3. **Abhängigkeiten hinzufügen**:
-   - Wenn du Maven verwendest, kannst du die `pom.xml` im Projektverzeichnis bearbeiten. Eclipse erkennt die Änderungen automatisch.
-
-### 4. Projekt kompilieren und ausführen
-
-- **Kompilieren**: In der IDE kannst du das Projekt in der Regel über einen Button oder ein Menü kompilieren.
-- **Ausführen**: Führe die Hauptklasse (z.B. `Main.java`) aus, indem du mit der rechten Maustaste darauf klickst und `Run` wählst.
-
-### 5. Tests ausführen
-
-Wenn du Tests geschrieben hast, kannst du diese ebenfalls über die IDE ausführen. In IntelliJ IDEA kannst du dies über die Testklasse oder die Testmethoden tun. In Eclipse kannst du die Testklasse ebenfalls mit der rechten Maustaste auswählen und `Run As` > `JUnit Test` wählen.
-
-### 6. Fehlerbehebung
-
-Falls du auf Probleme stößt:
-
-- Überprüfe die Konsolenausgaben auf Fehlermeldungen.
-- Stelle sicher, dass alle Abhängigkeiten korrekt in der `pom.xml` oder `build.gradle` definiert sind.
-- Überprüfe die JDK-Version und die Kompatibilität mit deinem Code.
-
-### Fazit
-
-Mit diesen Schritten solltest du in der Lage sein, eine Laufumgebung für dein bestehendes Java-Projekt einzurichten. Wenn du spezifische Probleme hast oder weitere Informationen benötigst, lass es mich wissen!
+- Überprüfe die Konsole auf Fehlermeldungen.
+- Stelle sicher, dass das richtige JDK installiert und in der IDE eingestellt ist.
+- Bei Problemen mit der Darstellung: Stelle sicher, dass Java Swing unterstützt wird.

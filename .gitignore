@@ -30,4 +30,4 @@ Thumbs.db
 *.swp
 *.swo
 .gradle/
-launch.json
+.vscode/
